@@ -12,3 +12,10 @@ for (let i = 0; i < gridSize; i++) {
         board.appendChild(div);
     }
 }
+
+const cells = document.querySelectorAll(".cell");
+cells.forEach((cell) => {
+    cell.addEventListener("mouseover", () => {
+        cell.classList.add("dark-cell");
+    });
+});
