@@ -1,3 +1,10 @@
+function resetBoard() {
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach((cell) => {
+        cell.classList.remove("dark-cell");
+    });
+}
+
 const board = document.querySelector(".board");
 let gridSize = 16;
 let cellSize = 600 / gridSize;
@@ -19,3 +26,6 @@ cells.forEach((cell) => {
         cell.classList.add("dark-cell");
     });
 });
+
+const reset = document.querySelector(".reset");
+reset.addEventListener("click", resetBoard);
