@@ -1,10 +1,3 @@
-function resetBoard() {
-    const cells = document.querySelectorAll(".cell");
-    cells.forEach((cell) => {
-        cell.classList.remove("dark-cell");
-    });
-}
-
 function darkenCell() {
     this.classList.add("dark-cell");
 }
@@ -43,9 +36,6 @@ slider.addEventListener("input", () => {
     const chosen = document.querySelector(".chosen");
     chosen.textContent = slider.value;
 });
-
-const reset = document.querySelector(".reset");
-reset.addEventListener("click", resetBoard);
 
 const size = document.querySelector(".resize");
 size.addEventListener("click", () => {
