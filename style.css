@@ -16,3 +16,8 @@
 .dark-cell {
     background-color: gray;
 }
+
+button {
+    padding: 24px;
+    margin: 24px;
+}
