@@ -38,21 +38,19 @@ function buildGrid(gridSize) {
     });
 }
 
-function getSize() {
-    return window.prompt(
-        "How many cells do you want per row of the grid?",
-        "16"
-    );
-}
-
-buildGrid(16);
+const slider = document.querySelector(".size");
+slider.addEventListener("input", () => {
+    const chosen = document.querySelector(".chosen");
+    chosen.textContent = slider.value;
+});
 
 const reset = document.querySelector(".reset");
 reset.addEventListener("click", resetBoard);
 
-const size = document.querySelector(".size");
+const size = document.querySelector(".resize");
 size.addEventListener("click", () => {
-    newSize = getSize();
     destroyGrid();
-    buildGrid(newSize);
+    buildGrid(slider.value);
 });
+
+buildGrid(slider.value);
