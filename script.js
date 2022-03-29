@@ -1,5 +1,5 @@
 function darkenCell() {
-    this.classList.add("dark-cell");
+    this.style.background = cellColor.value;
 }
 
 function destroyGrid() {
@@ -36,6 +36,8 @@ slider.addEventListener("input", () => {
     const chosen = document.querySelector(".chosen");
     chosen.textContent = slider.value;
 });
+
+const cellColor = document.querySelector(".color");
 
 const size = document.querySelector(".resize");
 size.addEventListener("click", () => {
